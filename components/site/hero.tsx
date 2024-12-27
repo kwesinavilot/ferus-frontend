@@ -3,7 +3,7 @@ import { Search } from 'lucide-react';
 
 const Hero = () => (
     <section className="relative bg-gradient-to-b from-blue-100 to-white ">
-        <div className="container mx-auto px-8 py-16 md:py-24">
+        <div className="md:container-fluid xl:container mx-auto px-8 py-16 md:py-24">
             <h1 className="text-4xl md:text-5xl font-bold text-center mb-8 text-gray-900">
                 How can we help?
             </h1>

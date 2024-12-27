@@ -1,5 +1,5 @@
 import React from "react";
-import { Shield, Bell, CreditCard, HelpCircle, Phone, Quote, MessageCircle } from 'lucide-react';
+import { Car, House, HeartPulse, Plane, Flame, Ship, Phone, Quote, MessageCircle, BadgeCent, BookText } from 'lucide-react';
 import Hero from "@/components/site/hero";
 import CategoryCard from "@/components/site/categorycard";
 import Image from "next/image";
@@ -11,66 +11,82 @@ export default function Home() {
     <main className="flex-grow">
       <Hero />
 
-      <section className="container mx-auto px-8 py-12">
+      <section className="md:container-fluid xl:container mx-auto px-8 py-12">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <CategoryCard
-            icon={() => <Shield className="h-6 w-6 text-blue-600" />}
-            title="Getting Started"
-            description="Let us walk you through setting up your devices and configuring your protection settings."
+            icon={() => <Car className="h-6 w-6 text-blue-600" />}
+            title="Motor Insurance"
+            description="Comprehensive coverage for your vehicles including third-party liability and accident protection."
           />
+
           <CategoryCard
-            icon={() => <Bell className="h-6 w-6 text-blue-600" />}
-            title="Alerts & Reports"
-            description="Stay informed with real-time notifications and detailed activity reports."
+            icon={() => <House className="h-6 w-6 text-blue-600" />}
+            title="Home Insurance"
+            description="Protect your property and belongings with our comprehensive home insurance solutions."
           />
+
           <CategoryCard
-            icon={() => <CreditCard className="h-6 w-6 text-blue-600" />}
-            title="Billing & Account"
-            description="Manage your subscription, payment methods, and account settings."
+            icon={() => <HeartPulse className="h-6 w-6 text-blue-600" />}
+            title="Personal Accident"
+            description="Financial protection for you and your loved ones in case of accidents or disability."
+          />
+
+          <CategoryCard
+            icon={() => <Plane className="h-6 w-6 text-blue-600" />}
+            title="Travel Insurance"
+            description="Stay protected worldwide with our travel insurance coverage for medical emergencies and more."
+          />
+
+          <CategoryCard
+            icon={() => <Flame className="h-6 w-6 text-blue-600" />}
+            title="Fire Insurance"
+            description="Safeguard your business and property against fire-related damages and losses."
+          />
+
+          <CategoryCard
+            icon={() => <Ship className="h-6 w-6 text-blue-600" />}
+            title="Marine Insurance"
+            description="Comprehensive coverage for marine cargo and vessels during transit and storage."
           />
         </div>
       </section>
 
       <section className="bg-gray-900 text-white px-8 py-12">
-        <div className="container mx-auto px-4">
+        <div className="md:container-fluid xl:container mx-auto px-4">
           <h2 className="text-2xl font-bold mb-6 text-center">Top Articles</h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="space-y-4">
-              {['Device Setup Guide', 'Protection Features', 'Account Management', 'Common Issues'].map((title) => (
+              {['How to File a Claim', 'Understanding Your Coverage', 'Policy Renewal Guide', 'Insurance Terms Explained'].map((title) => (
                 <div key={title} className="flex items-center space-x-3 hover:bg-gray-800 p-3 rounded-lg cursor-pointer">
-                  <HelpCircle className="h-5 w-5 text-blue-400" />
-
+                  <BookText className="h-5 w-5 text-blue-400" />
                   <div>
                     <h3 className="font-medium">{title}</h3>
-                    <p className="text-sm text-gray-400">Quick guide and troubleshooting tips</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-
-            <div className="space-y-4">
-              {['Device Setup Guide', 'Protection Features', 'Account Management', 'Common Issues'].map((title) => (
-                <div key={title} className="flex items-center space-x-3 hover:bg-gray-800 p-3 rounded-lg cursor-pointer">
-                  <HelpCircle className="h-5 w-5 text-blue-400" />
-
-                  <div>
-                    <h3 className="font-medium">{title}</h3>
-                    <p className="text-sm text-gray-400">Quick guide and troubleshooting tips</p>
+                    <p className="text-sm text-gray-400">Essential insurance information</p>
                   </div>
                 </div>
               ))}
             </div>
 
             <div className="space-y-4">
-              {['Device Setup Guide', 'Protection Features', 'Account Management', 'Common Issues'].map((title) => (
+              {['Auto Insurance Basics', 'Home Insurance Coverage', 'Life Insurance Guide', 'Business Insurance Tips'].map((title) => (
                 <div key={title} className="flex items-center space-x-3 hover:bg-gray-800 p-3 rounded-lg cursor-pointer">
-                  <HelpCircle className="h-5 w-5 text-blue-400" />
-
+                  <BookText className="h-5 w-5 text-blue-400" />
                   <div>
                     <h3 className="font-medium">{title}</h3>
-                    <p className="text-sm text-gray-400">Quick guide and troubleshooting tips</p>
+                    <p className="text-sm text-gray-400">Coverage type guides</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="space-y-4">
+              {['Premium Payment Options', 'Discount Programs', 'Policy Updates 2024', 'Emergency Contact Guide'].map((title) => (
+                <div key={title} className="flex items-center space-x-3 hover:bg-gray-800 p-3 rounded-lg cursor-pointer">
+                  <BadgeCent className="h-5 w-5 text-blue-400" />
+                  <div>
+                    <h3 className="font-medium">{title}</h3>
+                    <p className="text-sm text-gray-400">Account & payments info</p>
                   </div>
                 </div>
               ))}
@@ -79,7 +95,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="container mx-auto px-8 py-16">
+      <section className="md:container-fluid xl:container mx-auto px-8 py-16">
         <div className="flex flex-col md:flex-row gap-8">
           <div className="md:w-[40%]">
             <div className="rounded-lg w-full">
